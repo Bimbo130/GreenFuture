@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenFuture | Social Project</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Segoe UI", sans-serif;
+            color: #333;
+        }
+
+        header {
+            background: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            max-width: 700px;
+            line-height: 1.2;
+        }
+
+        header button {
+            margin-top: 25px;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            border: none;
+            background: #4CAF50;
+            color: white;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        header button:hover {
+            background: #43a047;
+        }
+
+        section {
+            padding: 80px 10%;
+        }
+
+        .about {
+            background: #f8f8f8;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .projects {
+            text-align: center;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: #f2f2f2;
+            border-radius: 10px;
+            padding: 25px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #2e7d32;
+        }
+
+        .contact {
+            background: #e8f5e9;
+            text-align: center;
+        }
+
+        .contact form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input, textarea {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            width: 100%;
+            font-size: 1rem;
+        }
+
+        button[type="submit"] {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background: #43a047;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer a {
+            color: #81c784;
+            margin: 0 8px;
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+                padding: 0 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Together for a Greener Future</h1>
+        <p>Join our mission to protect nature and build a sustainable world</p>
+        <button onclick="document.getElementById('about').scrollIntoView()">Learn More</button>
+    </header>
+
+    <section id="about" class="about">
+        <h2>About GreenFuture</h2>
+        <p>GreenFuture is a social initiative dedicated to environmental sustainability, education, and community action. 
+           We believe small steps lead to big change when people work together.</p>
+    </section>
+
+    <section class="projects">
+        <h2>Our Key Projects</h2>
+        <div class="project-grid">
+            <div class="card">
+                <h3>Urban Tree Planting</h3>
+                <p>We plant trees in cities to fight air pollution and create green oases for local communities.</p>
+            </div>
+            <div class="card">
+                <h3>Recycling Awareness</h3>
+                <p>We organize educational campaigns on sorting and recycling household waste.</p>
+            </div>
+            <div class="card">
+                <h3>Eco Education</h3>
+                <p>We work with schools and youth centers to promote environmental responsibility.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h2>Get Involved</h2>
+        <form onsubmit="submitForm(event)">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <textarea rows="4" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 GreenFuture Project | Follow us:
+            <a href="#">Facebook</a> |
+            <a href="#">Instagram</a> |
+            <a href="#">Twitter</a>
+        </p>
+    </footer>
+
+    <script>
+        function submitForm(e) {
+            e.preventDefault();
+            alert("Thank you for reaching out! We’ll get back to you soon.");
+            e.target.reset();
+        }
+    </script>
+
+</body>
+</html>
